@@ -32,14 +32,14 @@
 :root {
   --bgColor: #223344;
   --bgColor2: #090a0f;
-  --accentColor: #FFF;
+  --accentColor: black;
   --font: 'Karla', sans-serif;
   --delay: .3s; }
 
 .button {
   position: relative;
-  background-color: transparent;
-  color: var(--accentColor);
+  background-color: whitesmoke;
+  color: var(--bgColor);
   border: solid var(--accentColor) 2px;
   border-radius: 10px;
   font-size: 1rem;
@@ -56,14 +56,9 @@
 
 @media (hover: hover) {
   .button:hover {
-      background-color: var(--accentColor);
-      color: var(--bgColor);
+    filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.111));
+    color: black;
   }
-}
-
-.button:active {
-  background-color: var(--accentColor);
-  color: var(--bgColor);
 }
 
 
@@ -75,13 +70,17 @@
   vertical-align: middle;
   width: 20px;
   height: 20px;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  filter: grayscale(100%);
+  -webkit-filter: brightness(0%);
+  -moz-filter: brightness(0%);
+  filter: brightness(0%);
 }
 
 .button:hover .icon {
-  -webkit-filter: invert(100%) grayscale(100%);
-  -moz-filter: invert(100%) grayscale(100%);
-  filter: invert(100%) grayscale(100%);
+  -webkit-filter: brightness(0%);
+  -moz-filter: brightness(0%);
+  filter: brightness(0%);
+}
+
+p {
+  margin-bottom: 0.5em !important;
 }
